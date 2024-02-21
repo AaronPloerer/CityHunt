@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:nav="http://schemas.android.com/navigation"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/AStartFragment">
+
+    <fragment
+        android:id="@+id/AStartFragment"
+        android:name="com.example.please.AStartFragment"
+        android:label="Start Fragment"
+        tools:layout="@layout/afragment_start">
+
+        <action
+            android:id="@+id/action_AStartFragment_to_AOverviewFragment"
+            app:destination="@id/AOverviewFragment" />
+        <action
+            android:id="@+id/action_AStartFragment_to_AInfoFragment"
+            app:destination="@id/AInfoFragment" />
+        <action
+            android:id="@+id/action_AStartFragment_to_ASettingsFragment"
+            app:destination="@id/ASettingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AOverviewFragment"
+        android:name="com.example.please.AOverviewFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/afragment_overview">
+
+        <action
+            android:id="@+id/action_AOverviewFragment_to_ARegisterFragment"
+            app:destination="@id/ARegisterFragment" />
+        <action
+            android:id="@+id/action_AOverviewFragment_to_AStartFragment"
+            app:destination="@id/AStartFragment" />
+        <action
+            android:id="@+id/action_AOverviewFragment_to_AInfoFragment"
+            app:destination="@id/AInfoFragment" />
+        <action
+            android:id="@+id/action_AOverviewFragment_to_ASettingsFragment"
+            app:destination="@id/ASettingsFragment" />
+        <action
+            android:id="@+id/action_AOverviewFragment_to_AMapFragment"
+            app:destination="@id/AMapFragment" />
+        <action
+            android:id="@+id/action_AOverviewFragment_to_ADestinationFragment"
+            app:destination="@id/ADestinationFragment" />
+        <action
+            android:id="@+id/action_AOverviewFragment_to_ATicketFragment"
+            app:destination="@id/ATicketFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ATicketFragment"
+        android:name="com.example.please.ATicketFragment"
+        android:label="Ticket Fragment"
+        tools:layout="@layout/afragment_ticket">
+
+    <action
+        android:id="@+id/action_ATicketFragment_to_AOverviewFragment"
+        app:destination="@id/AOverviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ARegisterFragment"
+        android:name="com.example.please.ARegisterFragment"
+        android:label="Register Fragment"
+        tools:layout="@layout/afragment_register">
+
+        <action
+            android:id="@+id/action_ARegisterFragment_to_AOverviewFragment"
+            app:destination="@id/AOverviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ASettingsFragment"
+        android:name="com.example.please.ASettingsFragment"
+        android:label="Settings Fragment"
+        tools:layout="@layout/afragment_settings">
+
+        <action
+            android:id="@+id/action_ASettingsFragment_to_AOverviewFragment"
+            app:destination="@id/AOverviewFragment" />
+        <action
+            android:id="@+id/action_ASettingsFragment_to_AStartFragment"
+            app:destination="@id/AStartFragment" />
+        <argument
+            android:name="fromStart"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AInfoFragment"
+        android:name="com.example.please.AInfoFragment"
+        android:label="Info Fragment"
+         tools:layout="@layout/afragment_info">
+
+        <action
+            android:id="@+id/action_AInfoFragment_to_AOverviewFragment"
+            app:destination="@id/AOverviewFragment" />
+        <action
+            android:id="@+id/action_AInfoFragment_to_AStartFragment"
+            app:destination="@id/AStartFragment" />
+        <argument
+            android:name="fromStart"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AMapFragment"
+        android:name="com.example.please.AMapFragment"
+        android:label="Map Fragment"
+        tools:layout="@layout/afragment_map">
+
+        <action
+            android:id="@+id/action_AMapFragment_to_AOverviewFragment"
+            app:destination="@id/AOverviewFragment" />
+        <action
+            android:id="@+id/action_AMapFragment_to_ADestinationFragment"
+            app:destination="@id/ADestinationFragment" />
+        <argument
+            android:name="longitude"
+            app:argType="float" />
+        <argument
+            android:name="latitude"
+            app:argType="float" />
+        <argument
+        android:name="keepCameraPosition"
+        app:argType="boolean" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ADestinationFragment"
+        android:name="com.example.please.ADestinationFragment"
+        android:label="Map Fragment"
+        tools:layout="@layout/afragment_destination">
+
+        <action
+            android:id="@+id/action_ADestinationFragment_to_AMapFragment"
+            app:destination="@id/AMapFragment" />
+        <action
+            android:id="@+id/action_ADestinationFragment_to_AOverviewFragment"
+            app:destination="@id/AOverviewFragment" />
+        <argument
+            android:name="fromMap"
+            app:argType="boolean" />
+        <argument
+            android:name="longitude"
+            app:argType="float" />
+        <argument
+            android:name="latitude"
+            app:argType="float" />
+        <argument
+            android:name="destinationNumber"
+            app:argType="integer" />
+    </fragment>
+</navigation>

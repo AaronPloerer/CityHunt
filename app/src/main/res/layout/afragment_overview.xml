@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    tools:context=".AOverviewFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top"
+        android:background="@color/appgray">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/appblue"
+            tools:context=".ARegisterFragment">
+
+            <ImageView
+                android:id="@+id/imageLogo"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/logo_white"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageInfo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/info_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/imageSettings"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageSettings"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/settings_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/buy"
+            android:background="@drawable/table_border"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/below_buttons_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="All Destinations"
+            android:contentDescription="@null"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_gravity="left"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/coolvetica"/>
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            app:liteMode="false"
+            app:mapType="normal"
+            app:cameraZoom="12"
+            app:cameraBearing="0"
+            app:cameraTargetLat="37.7749"
+            app:cameraTargetLng="-122.4194"
+            app:uiZoomControls="false"
+            app:uiCompass="false"
+            app:uiScrollGestures="false"
+            app:uiZoomGestures="false"
+            app:uiTiltGestures="false"
+            app:uiRotateGestures="false"
+            app:uiMapToolbar="false"
+            android:background="@drawable/table_border" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/table_border">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/aurum_deggendorf"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/coolveticarg"
+                    android:textSize="18dp" />
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:src="@drawable/destination"
+                    android:contentDescription="More Info"
+                    android:id="@+id/destinationButton1"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/lord_lobo_nelson"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/coolveticarg"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:src="@drawable/destination"
+                    android:contentDescription="More Info"
+                    android:id="@+id/destinationButton2"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/cafe_bar_first_floor"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/coolveticarg"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:src="@drawable/destination"
+                    android:contentDescription="More Info"
+                    android:id="@+id/destinationButton3"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/home_bar"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/coolveticarg"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:src="@drawable/destination"
+                    android:contentDescription="More Info"
+                    android:id="@+id/destinationButton4"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/sams_bar"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/coolveticarg"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:src="@drawable/destination"
+                    android:contentDescription="More Info"
+                    android:id="@+id/destinationButton5"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/cafe_extra_deggendorf_gmbh"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/coolveticarg"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:src="@drawable/destination"
+                    android:contentDescription="More Info"
+                    android:id="@+id/destinationButton6"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/flair_deggendorf"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/coolveticarg"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:src="@drawable/destination"
+                    android:contentDescription="More Info"
+                    android:id="@+id/destinationButton7"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/black" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:text="@string/c2_coffee_cocktails_deggendorf"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/coolveticarg"
+                    android:textSize="18dp"/>
+
+                <ImageButton
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:contentDescription="More Info"
+                    android:src="@drawable/destination"
+                    android:id="@+id/destinationButton8"/>
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>
