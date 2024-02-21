@@ -2,6 +2,7 @@
 
 von Aaron Plörer (22103171)
 
+
 Das Projekt befindet sich im Master-Zweig. Nachdem man das Projekt in Android Studio geöffnet hat, kann man die App ausführen. Wenn man das Handy mit Android Studio verbindet, kann man die App auch darauf öffnen.
 
 Beim Öffnen der App gelangt man zu einem Fenster, in dem alle Events angezeigt werden sollen (aktuell gibt es nur eins). Wenn man auf das Event tippt, gelangt man zu einem spezifischen Event-Fenster. Oben bleibt die gleiche Aktionsleiste mit drei Symbolen. Auf der rechten Seite befindet sich ein Symbol für Informationen und eins für Einstellungen, während auf der linken Seite das App-Logo angezeigt wird. Wenn man auf das Informations-Symbol klickt, gelangt man zu einer Informationsseite, und beim Klicken des Einstellungen-Symbols gelangt man zur Einstellungsseite. Sie funktionieren genauso auch beim Fenster für die Eventauswahl. Das Logo kann verwendet werden, um vom Event-Fenster zur Eventauswahl zurückzukehren. 
